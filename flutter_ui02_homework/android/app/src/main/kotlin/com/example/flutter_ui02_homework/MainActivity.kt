@@ -1,4 +1,4 @@
-package com.example.ui01_textstyle
+package com.example.flutter_ui02_homework
 
 import io.flutter.embedding.android.FlutterActivity
 
