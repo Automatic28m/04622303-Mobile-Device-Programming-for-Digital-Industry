@@ -25,14 +25,24 @@ class MainApp extends StatelessWidget {
       home: DefaultTabController(
         length: 5,
         child: Scaffold(
-          appBar: AppBar(
-            title: const Text('ประวัติของ พัลลภ บุญเหลือ'),
-            bottom: const TabBar(
+          appBar: AppBar(title: const Text('ประวัติของ พัลลภ บุญเหลือ')),
+          body: const TabBarView(
+            children: [
+              Home(),
+              Project(),
+              Archievement(),
+              Education(),
+              Internship(),
+            ],
+          ),
+          bottomNavigationBar: Container(
+            color: Colors.blue,
+            child: TabBar(
               labelStyle: TextStyle(fontSize: 0),
               unselectedLabelStyle: TextStyle(fontSize: 10),
               indicatorColor: Colors.white,
               labelColor: Colors.white,
-              unselectedLabelColor: Colors.white70,
+              unselectedLabelColor: Colors.white,
               tabs: [
                 Tab(icon: Icon(Icons.home), text: 'หน้าแรก'),
                 Tab(icon: Icon(Icons.auto_graph_rounded), text: 'โปรเจก'),
@@ -44,15 +54,6 @@ class MainApp extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          body: const TabBarView(
-            children: [
-              Home(),
-              Project(),
-              Archievement(),
-              Education(),
-              Internship(),
-            ],
           ),
         ),
       ),
